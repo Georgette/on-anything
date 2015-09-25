@@ -1,0 +1,39 @@
+{
+  "name": "whax",
+  "version": "0.0.0",
+  "description": "bind handlers to any type of event emitter",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Georgette/whax.git"
+  },
+  "keywords": [
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Georgette/whax/issues"
+  },
+  "homepage": "https://github.com/Georgette/whax",
+  "author": {
+    "name": "Gege Pincin",
+    "email": "gege@pincin.com",
+    "url": "https://github.com/Georgette"
+  },
+  "contributors": [
+  ],
+  "devDependencies": {
+    "@jasonpincin/standard": "~5.0.0-7",
+    "istanbul": "~0.3.17",
+    "opn": "~1.0.2",
+    "tap-dot": "~1.0.0",
+    "tap-spec": "~4.1.0",
+    "tape": "~4.2.0",
+    "phantomjs": "~1.9.18",
+    "zuul": "~3.3.0"
+  },
+  "scripts": {
+    "test": "make npm-test",
+    "coverage": "make npm-coverage",
+    "browser-test": "make browser-test"
+  }
+}
