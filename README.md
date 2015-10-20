@@ -7,11 +7,70 @@
 
 bind handlers to any type of event emitter
 
+# Why whax
+
+While working on another event-based project, it became clear how important it was to standardize events; node.js, jquery, and javascript in the browser each have their own way of setting up event handlers. Whax provides one way to bind handlers the same way in all 3 places.
+
+
 ## example
 
+### Node Emitter
+
 ```javascript
-TODO
+var whax         = require('../whax'),
+    EventEmitter = require('events').EventEmitter
+
+var emitter = new EventEmitter()
+
 ```
+In order to shut off an event handler, store a reference to the handler
+
+```javascript
+
+var handleRequest = function (request) {
+
+}
+
+on(emitter, 'request', handleRequest)
+
+emitter.emit('request')
+
+```
+
+We no longer want to listen to the request event
+
+```javascript
+
+off(emitter, 'request', handleRequest)
+
+```
+
+### Browser
+
+Query an element to register an element against, I'll use jquery
+
+```javascript
+
+var $button = $('#button')
+var showPanel = function() {
+    $('#panel').show()
+}
+
+on($button, 'click', showPanel)
+
+$button.trigger('click')
+
+
+```
+
+We no longer want to listen to click events on the button
+
+```javascript
+
+off(button, 'click', showPanel)
+
+```
+
 
 ## api
 
@@ -29,7 +88,7 @@ npm install whax
 
 `npm test [--dot | --spec] [--phantom] [--grep=pattern]`
 
-Specifying `--dot` or `--spec` will change the output from the default TAP style. 
+Specifying `--dot` or `--spec` will change the output from the default TAP style.
 Specifying `--phantom` will cause the tests to run in the headless phantom browser instead of node.
 Specifying `--grep` will only run the test files that match the given pattern.
 
@@ -43,5 +102,5 @@ This will run the tests in all browsers (specified in .zuul.yml). Be sure to [ed
 
 `npm run coverage [--html]`
 
-This will output a textual coverage report. Including `--html` will also open 
+This will output a textual coverage report. Including `--html` will also open
 an HTML coverage report in the default browser.
