@@ -16,7 +16,7 @@ help:
 	@echo "  npm run coverage [--html]"
 	@echo
 
-npm-test: 
+npm-test:
 ifdef npm_config_grep
 	@make lint test
 else
@@ -32,6 +32,9 @@ travis-test: lint test
 
 browser-test:
 	@$(BIN)/zuul -- test/*.js
+
+phantom-test:
+	@$(BIN)/zuul --phantom -- test/*.js
 
 npm-coverage: coverage-report coverage-html-report
 ifdef npm_config_html
