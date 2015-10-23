@@ -12,4 +12,8 @@ module.exports = function off (element, event, cb) {
         element.removeListener(event, cb)
     }
 
+    else {
+        throw new Error('unknown emitter type')
+    }
+
 }

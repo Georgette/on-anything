@@ -8,4 +8,8 @@ module.exports = function on (element, event, cb) {
         element.on(event, cb)
     }
 
+    else {
+        throw new Error('unknown emitter type')
+    }
+
 }

@@ -7,9 +7,11 @@
 
 bind handlers to any type of event emitter
 
-# Why whax
+# Why Whax
 
 While working on another event-based project, it became clear how important it was to standardize events; node.js, jquery, and javascript in the browser each have their own way of setting up event handlers. Whax provides one way to bind handlers the same way in all 3 places.
+
+There might be other modules that do this, but this is all whax does
 
 
 ## example
@@ -28,7 +30,7 @@ In order to shut off an event handler, store a reference to the handler
 ```javascript
 
 var handleRequest = function (request) {
-
+    //do something with request
 }
 
 on(emitter, 'request', handleRequest)
