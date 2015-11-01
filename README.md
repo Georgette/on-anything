@@ -9,7 +9,7 @@ bind handlers to any type of event emitter
 
 # Why Whax
 
-While working on another event-based project, it became clear how important it was to standardize events; node.js, jquery, and javascript in the browser each have their own way of setting up event handlers. Whax provides one way to bind handlers the same way in all 3 places.
+While working on another event-based project, it became clear how important it was to standardize events; node.js, jquery, and javascript in the browser each have their own way of setting up event handlers. Whax provides one way to bind handlers in all 3 places.
 
 There might be other modules that do this, but this is all whax does
 
@@ -76,7 +76,17 @@ off(button, 'click', showPanel)
 
 ## api
 
-TODO
+```
+var whax = require('whax')
+
+```
+
+### whax.on(object, event, cb)
+Bind a listener to a node, jquery, or javascript dom object. The callback function passed must be a reference to the same callback used when binding the listener.
+
+
+### whax.off(object, event, cb)
+Unbind a listener to a node, jquery, or javascript dom object.
 
 ## install
 
@@ -106,3 +116,8 @@ This will run the tests in all browsers (specified in .zuul.yml). Be sure to [ed
 
 This will output a textual coverage report. Including `--html` will also open
 an HTML coverage report in the default browser.
+
+
+## TODO
+
+Provide a way to unbind all listeners when no callback is provided for whax.off
