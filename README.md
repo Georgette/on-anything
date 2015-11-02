@@ -77,15 +77,16 @@ off(button, 'click', showPanel)
 ## api
 
 ```
-var whax = require('whax')
+var on  = require('whax/on'), // or require('whax').on
+    off = require('whax/off') // or require('whax').off
 
 ```
 
-### whax.on(object, event, cb)
+### on(object, event, cb)
 Bind a listener to a node, jquery, or javascript dom object. The callback function passed must be a reference to the same callback used when binding the listener.
 
 
-### whax.off(object, event, cb)
+### off(object, event, cb)
 Unbind a listener to a node, jquery, or javascript dom object.
 
 ## install
@@ -109,6 +110,7 @@ Specifying `--grep` will only run the test files that match the given pattern.
 `npm run browser-test`
 
 This will run the tests in all browsers (specified in .zuul.yml). Be sure to [educate zuul](https://github.com/defunctzombie/zuul/wiki/cloud-testing#2-educate-zuul) first.
+
 
 ### coverage
 
