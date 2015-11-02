@@ -3,17 +3,17 @@ var on           = require('../on'),
     $            = require('jquery')
 
 // must be run in the browser or through phantomjs
-//phantom:   phantomjs example/jquery-example.js
+// phantom:   phantomjs example/jquery-example.js
 
 var $button = $('<button></button>')
-var cb = function() {
+
+var cb = function () {
     console.log('jquery event handled')
 }
 
 on($button, 'click', cb)
 
 $button.trigger('click')
-
 
 off($button, 'click', cb)
 

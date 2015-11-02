@@ -1,9 +1,6 @@
 var EventEmitter = require('events').EventEmitter,
     on           = require('../on'),
-    off          = require('../off'),
-    $            = require('jquery')
-
-//node
+    off          = require('../off')
 
 var emitter = new EventEmitter()
 
