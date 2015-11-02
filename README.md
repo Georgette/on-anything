@@ -8,7 +8,7 @@ bind handlers to any type of event emitter
 
 # Why Whax
 
-While working on another event-based project, it became clear how important it was to standardize events; node.js, jquery, and javascript in the browser each have their own way of setting up event handlers. Whax provides one way to bind handlers in all 3 places.
+While working on another event-based project, I wanted a way to bind events across a software stack; Whax provides one way to bind handlers in node.js, jquery, and native javascript in the browser.
 
 There might be other modules that do this, but this is all whax does
 
@@ -19,7 +19,8 @@ There might be other modules that do this, but this is all whax does
 
 ```javascript
 
-var whax         = require('../whax'),
+var on         = require('whax/on'),
+    off         = require('whax/off'),
     EventEmitter = require('events').EventEmitter
 
 var emitter = new EventEmitter()
@@ -69,7 +70,7 @@ We no longer want to listen to click events on the button
 
 ```javascript
 
-off(button, 'click', showPanel)
+off($button, 'click', showPanel)
 
 ```
 
