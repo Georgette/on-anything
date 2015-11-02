@@ -3,7 +3,6 @@
 [![NPM version](https://badge.fury.io/js/whax.png)](http://badge.fury.io/js/whax)
 [![Build Status](https://travis-ci.org/Georgette/whax.svg?branch=master)](https://travis-ci.org/Georgette/whax)
 [![Coverage Status](https://coveralls.io/repos/Georgette/whax/badge.png?branch=master)](https://coveralls.io/r/Georgette/whax?branch=master)
-[![Sauce Test Status](https://saucelabs.com/browser-matrix/Georgette_github.svg)](https://saucelabs.com/u/Georgette_github)
 
 bind handlers to any type of event emitter
 
@@ -19,6 +18,7 @@ There might be other modules that do this, but this is all whax does
 ### Node Emitter
 
 ```javascript
+
 var whax         = require('../whax'),
     EventEmitter = require('events').EventEmitter
 
@@ -76,7 +76,8 @@ off(button, 'click', showPanel)
 
 ## api
 
-```
+```javascript
+
 var on  = require('whax/on'), // or require('whax').on
     off = require('whax/off') // or require('whax').off
 
