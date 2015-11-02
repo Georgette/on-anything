@@ -121,4 +121,5 @@ an HTML coverage report in the default browser.
 ## TODO
 
 Provide a way to unbind all listeners when no callback is provided for whax.off
+
 Provide example usage in usage.js
